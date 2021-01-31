@@ -1,11 +1,13 @@
-import math
+num = int(input("Enter a number : "))
 
-start = int(input("enter first number : "))
-end = int(input("enter second number : "))
-
-for i in range(start,end):
-    for j in range(2,i):
-        if(i%j==0):
-            break
-    else:
-        print(i)
+isDivisible = False
+i = 2
+while i < num:
+    if num % i == 0:
+        isDivisible = True
+        print("{} is divisible by {}".format(num, i))
+    i += 1
+if isDivisible:
+    print("{} is Not A Prime Number".format(num))
+else:
+    print("{} is A Prime Number".format(num))
